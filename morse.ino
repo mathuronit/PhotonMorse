@@ -17,7 +17,7 @@ const String morse[] = { ".-", "-...", "-.-.", "-..",
   "--.."};
 
 void setup() {
-pinMode(greenSwitch,INPUT_PULLUP); // But in reality i'm using blue :P
+pinMode(greenSwitch,INPUT_PULLUP); //
 pinMode(redSwitch,INPUT_PULLUP); //
 pinMode(speakerPin, OUTPUT);
 pinMode(redLED, OUTPUT);
