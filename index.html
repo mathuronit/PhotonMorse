@@ -1,55 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <title>Morse.. Of Course</title>
+  <title>Morse.. Of Course!</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script type="text/javascript">
-  var accessToken = "xxxx";
-  var deviceID = "xxxx";
+    var accessToken = "xxxx";
+    var deviceID = "xxxx";
 
-
-  function sendToPhoton(){
+    function sendToPhoton() {
       var url = "https://api.spark.io/v1/devices/" + deviceID + "/morseMe";
-    var msg = $('#message').val();
-  $.post(url, { params: msg, access_token: accessToken });
-  }
-  function playSOS(){
-          var url = "https://api.spark.io/v1/devices/" + deviceID + "/playSOS";
-            $.post(url, { params: "sos", access_token: accessToken });
-  }
-  function findPhoton(){
-          var url = "https://api.spark.io/v1/devices/" + deviceID + "/findMyPhoton";
-            $.post(url, { params: "", access_token: accessToken });
-  }
+      var msg = $('#message').val();
+      $.post(url, {
+        params: msg,
+        access_token: accessToken
+      });
+    }
 
+    function playSOS() {
+      var url = "https://api.spark.io/v1/devices/" + deviceID + "/playSOS";
+      $.post(url, {
+        params: "sos",
+        access_token: accessToken
+      });
+    }
+
+    function findPhoton() {
+      var url = "https://api.spark.io/v1/devices/" + deviceID + "/findMyPhoton";
+      $.post(url, {
+        params: "",
+        access_token: accessToken
+      });
+    }
   </script>
 </head>
-
 <style>
-.jumbotron {
+  .jumbotron {
     background-color: #555;
     color: #ffffff;
-}
+  }
 </style>
 
 <body class="jumbotron">
   <div class="text-center">
     <h1>Morse ... Of Course!</h1>
     <form class="form-inline">
-   <input type="text" id="message" name="message" class="form-control" size="40" placeholder="Enter Message">
-   <button type="button" class="btn btn-primary" onclick="sendToPhoton()" >Send To Photon</button>
- </form>
- </br>
- </br>
-  <button type="button" class="btn btn-danger btn-lg" id="sos" onclick="playSOS()" >SOS</button>
- </br>
- </br>
- <button type="button" class="btn btn-danger btn-lg" id="findPhoton" onclick="findPhoton()">Find My Photon</button>
+      <input type="text" id="message" name="message" class="form-control" size="40" placeholder="Enter Message">
+      <button type="button" class="btn btn-primary" onclick="sendToPhoton()">Send To Photon</button>
+    </form>
+    </br>
+    </br>
+    <button type="button" class="btn btn-danger btn-lg" id="sos" onclick="playSOS()">SOS</button>
+    </br>
+    </br>
+    <button type="button" class="btn btn-danger btn-lg" id="findPhoton" onclick="findPhoton()">Find My Photon</button>
   </div>
 </body>
 </body>
+
 </html>
