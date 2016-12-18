@@ -17,8 +17,8 @@ const String morse[] = { ".-", "-...", "-.-.", "-..",
   "--.."};
 
 void setup() {
-pinMode(greenSwitch,INPUT_PULLUP); //
-pinMode(redSwitch,INPUT_PULLUP); //
+pinMode(greenSwitch,INPUT_PULLUP); // enable the green switch
+pinMode(redSwitch,INPUT_PULLUP); // enable the red switch
 pinMode(speakerPin, OUTPUT);
 pinMode(redLED, OUTPUT);
 Serial.begin(9600);
